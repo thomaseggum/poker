@@ -2,6 +2,13 @@
 $:.unshift(File.dirname(__FILE__) + '/../../lib')
 #require 'poker'
 
-Gitt /^at (.*) har (.*)$/ do |spiller, hånd|
-  pending
+Given /^(.*) has (.*)$/ do |player, hand|
+  @hand = hand
 end
+
+Then /^(.*) should have (.*) points$/ do |player, points|
+  @poker = Poker.new
+  points = @poker.rateHand(@hand)
+end
+
+
