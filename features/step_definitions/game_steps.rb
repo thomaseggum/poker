@@ -7,10 +7,10 @@ Before do
   @poker = Poker.new
 end
 
-Given /^(.*) has (.*)$/ do |player,cardHand|
+Given /^(.*) has (.*)$/ do |player,card_hand|
   hand = Hand.new
-  hand.player(player)
-  hand.cardHand(cardHand)
+  hand.player = player
+  hand.card_hand = card_hand
   @poker.addHand(hand)
 end
 
