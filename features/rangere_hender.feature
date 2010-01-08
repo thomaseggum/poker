@@ -5,6 +5,6 @@
 Feature: Range hands
 
   Scenario: Rate high cards
-    Given white has H2
-    Then white should have 2 points
-    
+    Given white has H8 S2 K3 H4 S5 H6 R7
+    And black has H8 S2 K3 H4 S5 H9 S10
+    Then black should win

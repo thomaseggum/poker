@@ -1,14 +1,20 @@
 # encoding: utf-8
 $:.unshift(File.dirname(__FILE__) + '/../../lib')
-#require 'poker'
+require 'poker'
+require 'hand'
 
-Given /^(.*) has (.*)$/ do |player, hand|
-  @hand = hand
-end
-
-Then /^(.*) should have (.*) points$/ do |player, points|
+Before do
   @poker = Poker.new
-  points = @poker.rateHand(@hand)
 end
 
+Given /^(.*) has (.*)$/ do |player,cardHand|
+  hand = Hand.new
+  hand.player(player)
+  hand.cardHand(cardHand)
+  @poker.addHand(hand)
+end
 
+Then /^(.*) should win$/ do |player|
+  player = @poker.findWinner
+  player.should == "black"
+end
