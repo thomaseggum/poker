@@ -27,3 +27,9 @@ Feature: Range hands
     And black has H8 S2 K3 H4 S5 K2 S8
     Then black should win
     And card combination should be twopairs
+
+  Scenario: Rate two pairs against one pair
+    Given white has H9 S9 K3 H4 S5 H6 R13
+    And black has H8 S2 K3 H4 S5 K2 S8
+    Then black should win
+    And card combination should be twopairs
