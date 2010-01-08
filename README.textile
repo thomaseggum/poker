@@ -68,7 +68,7 @@ h4. Forberedelser
 Fjerne evt annet ikke-java.
 
 <pre>
-mvn integration-test -Dcucumber.installGems=true
+mvn integration-test -Dcucumber.installGems=true  (kjøre med -co for offline)
 </pre>
 
 h4. Kjøre Cucumber
