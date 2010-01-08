@@ -18,4 +18,4 @@ Feature: Range hands
     Given white has H8 S2 K3 H4 S5 H6 R13
     And black has H8 S2 K3 H4 S5 K2 S11
     Then black should win
-    And card combination should be H8 S2 K3 H4 S5 K2 S11
+    And card combination should be pair

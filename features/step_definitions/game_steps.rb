@@ -19,7 +19,8 @@ Then /^(.*) should win$/ do |player|
   h.player.should == player
 end
 
-Then /^card combination should be (.*)$/ do | cardCombination |
+Then /^card combination should be (.*)$/ do | winnerComb |
   h = @poker.findWinner
-  h.card_hand.should == cardCombination
+  puts "What is it really?? #{h.winning_type}"
+  h.winning_type.should == winnerComb
 end
