@@ -15,6 +15,11 @@ Given /^(.*) has (.*)$/ do |player,card_hand|
 end
 
 Then /^(.*) should win$/ do |player|
-  player = @poker.findWinner
-  player.should == "black"
+  h = @poker.findWinner
+  h.player.should == player
+end
+
+Then /^card combination should be (.*)$/ do | cardCombination |
+  h = @poker.findWinner
+  h.card_hand.should == cardCombination
 end
