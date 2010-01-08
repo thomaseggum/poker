@@ -21,6 +21,5 @@ end
 
 Then /^card combination should be (.*)$/ do | winnerComb |
   h = @poker.findWinner
-  puts "What is it really?? #{h.winning_type}"
   h.winning_type.should == winnerComb
 end
